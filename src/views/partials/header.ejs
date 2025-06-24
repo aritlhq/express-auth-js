@@ -11,6 +11,9 @@
     <a href="/">Home</a>
     <% if (user) { %>
         <a href="/dashboard">Dashboard</a>
+        <% if (user.role === 'ADMIN') { %>
+            <a href="/admin">Admin Panel</a>
+        <% } %>
         <form action="/auth/logout" method="POST" style="display:inline;">
             <button type="submit">Logout</button>
         </form>
