@@ -16,10 +16,10 @@ export const protect = async (req, res, next) => {
         // Verify the token
         const decoded = jwt.verify(token, JWT_SECRET);
 
-        // Find the user by ID from the token payload, but exclude the password
+        // Find the user by ID from the token payload but exclude the password
         const user = await prisma.user.findUnique({
             where: {id: decoded.userId},
-            select: {id: true, name: true, email: true, createdAt: true},
+            select: {id: true, name: true, email: true, createdAt: true, role: true},
         });
 
         if (!user) {
@@ -30,7 +30,7 @@ export const protect = async (req, res, next) => {
         req.user = user;
         next();
     } catch (error) {
-        // If token is invalid or expired
+        // If the token is invalid or expired
         console.error(error);
         res.clearCookie('token');
         return res.status(401).redirect('/login');
@@ -51,11 +51,33 @@ export const addUserToLocals = async (req, res, next) => {
         const decoded = jwt.verify(token, JWT_SECRET);
         const user = await prisma.user.findUnique({
             where: {id: decoded.userId},
-            select: {id: true, name: true, email: true},
+            select: {id: true, name: true, email: true, role: true},
         });
         res.locals.user = user || null;
     } catch (error) {
         res.locals.user = null;
     }
+    next();
+};
+
+export const authorize = (roles) => {
+    return (req, res, next) => {
+        // Relies on `protect` middleware running first to attach `req.user`
+        if (!req.user || !roles.includes(req.user.role)) {
+            // Render a 403 Forbidden page
+            return res.status(403).render('unauthorized', {user: req.user});
+        }
+        next();
+    }
+};
+
+export const redirectIfAuthenticated = (req, res, next) => {
+    const token = req.cookies.token;
+
+    // If a token exists, it means the user is logged in
+    if (token) {
+        return res.redirect('/dashboard');
+    }
+    // If no token, they can proceed to the login/register page
     next();
 };
