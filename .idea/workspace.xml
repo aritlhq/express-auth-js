@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="" />
+    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/.env-example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +19,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -32,6 +38,7 @@
     &quot;HTTP Request.test | POST#2.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -85,11 +92,240 @@
       <option name="presentableId" value="Default" />
       <updated>1748554004702</updated>
       <workItem from="1748554009270" duration="253000" />
-      <workItem from="1750667540621" duration="8829000" />
+      <workItem from="1750667540621" duration="12636000" />
     </task>
+    <task id="LOCAL-00001" summary="chore: add JetBrains IDE workspace configuration file">
+      <option name="closed" value="true" />
+      <created>1750686396107</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686396107</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: add .gitignore file with common exclusions">
+      <option name="closed" value="true" />
+      <created>1750686404495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686404495</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: Add HTTP request response snapshot for dashboard access">
+      <option name="closed" value="true" />
+      <created>1750686411467</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686411467</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add auth controller with register, login, and logout functionality">
+      <option name="closed" value="true" />
+      <created>1750686480673</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686480673</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add auth middleware with JWT verification and user handling&#10;&#10;Add protect middleware for route authentication and addUserToLocals for template access">
+      <option name="closed" value="true" />
+      <created>1750686489917</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686489917</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: add auth middleware and routes for user authentication&#10;&#10;Add auth middleware with protect and addUserToLocals functions&#10;Add auth routes for register, login, and logout operations">
+      <option name="closed" value="true" />
+      <created>1750686497920</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686497920</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: add dashboard view with user greeting and protected content&#10;&#10;Added new dashboard.ejs template displaying welcome message and user details">
+      <option name="closed" value="true" />
+      <created>1750686506609</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686506609</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: add dashboard view for authenticated users&#10;&#10;The commit adds a new dashboard.ejs view that displays user information and welcome">
+      <option name="closed" value="true" />
+      <created>1750686517226</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686517226</updated>
+    </task>
+    <task id="LOCAL-00009" summary=" message for logged-in users. The view includes header and footer partials and showsfe protected content.at: add footer partial with closing HTML tags">
+      <option name="closed" value="true" />
+      <created>1750686524099</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686524099</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: add header and footer partials for views">
+      <option name="closed" value="true" />
+      <created>1750686531154</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686531154</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: add header partial with auth navigation&#10;&#10;Add header.ejs template with conditional navigation links for authenticated users. Includes login/logout functionality and basic page structure.">
+      <option name="closed" value="true" />
+      <created>1750686537854</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686537854</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chore: add HTTP request log for auth login endpoint">
+      <option name="closed" value="true" />
+      <created>1750686562880</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686562880</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: add HTTP request log and home page template&#10;&#10;chore: include new files for development environment and views">
+      <option name="closed" value="true" />
+      <created>1750686570023</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686570023</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: add index and login EJS templates&#10;&#10;Add initial view templates for home page and login form, including partial includes for header and footer.">
+      <option name="closed" value="true" />
+      <created>1750686577321</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686577321</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: add initial User table migration&#10;&#10;Added User table with id, name, email, password, createdAt, and updatedAt fields. Includes unique email constraint and primary key.">
+      <option name="closed" value="true" />
+      <created>1750686589158</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686589158</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chore: add prisma migration lock file for mysql">
+      <option name="closed" value="true" />
+      <created>1750686596268</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686596268</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chore: add initial package.json with project dependencies">
+      <option name="closed" value="true" />
+      <created>1750686603863</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686603863</updated>
+    </task>
+    <task id="LOCAL-00018" summary=" page controller with basic route handlers&#10;&#10;Added controller functions for home, login, register, and dashboard pagesfeat: add page controller">
+      <option name="closed" value="true" />
+      <created>1750686621194</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686621194</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: add page routes with auth middleware and protected dashboard route">
+      <option name="closed" value="true" />
+      <created>1750686628459</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686628459</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: add register view template with form and error handling">
+      <option name="closed" value="true" />
+      <created>1750686636623</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686636623</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Generating commit message...">
+      <option name="closed" value="true" />
+      <created>1750686645362</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686645362</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: add initial Prisma schema and Express server setup&#10;&#10;Add User model to Prisma schema and configure basic Express server with auth routes">
+      <option name="closed" value="true" />
+      <created>1750686652402</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686652402</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test: add HTTP test file for auth login endpoint">
+      <option name="closed" value="true" />
+      <created>1750686660919</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686660919</updated>
+    </task>
+    <task id="LOCAL-00024" summary="chore: add VCS configuration file for IntelliJ IDEA&#10;&#10;The file configures Git as the version control system for the project.">
+      <option name="closed" value="true" />
+      <created>1750686670099</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686670099</updated>
+    </task>
+    <task id="LOCAL-00025" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1750686677675</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686677675</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: add JetBrains IDE workspace configuration file" />
+    <MESSAGE value="chore: add .gitignore file with common exclusions" />
+    <MESSAGE value="chore: Add HTTP request response snapshot for dashboard access" />
+    <MESSAGE value="feat: add auth controller with register, login, and logout functionality" />
+    <MESSAGE value="feat: add auth middleware with JWT verification and user handling&#10;&#10;Add protect middleware for route authentication and addUserToLocals for template access" />
+    <MESSAGE value="feat: add auth middleware and routes for user authentication&#10;&#10;Add auth middleware with protect and addUserToLocals functions&#10;Add auth routes for register, login, and logout operations" />
+    <MESSAGE value="feat: add dashboard view with user greeting and protected content&#10;&#10;Added new dashboard.ejs template displaying welcome message and user details" />
+    <MESSAGE value="feat: add dashboard view for authenticated users&#10;&#10;The commit adds a new dashboard.ejs view that displays user information and welcome" />
+    <MESSAGE value=" message for logged-in users. The view includes header and footer partials and showsfe protected content.at: add footer partial" />
+    <MESSAGE value="feat: add header and footer partials for views" />
+    <MESSAGE value="feat: add header partial with auth navigation&#10;&#10;Add header.ejs template with conditional navigation links for authenticated users. Includes login/logout functionality and basic page" />
+    <MESSAGE value="chore: add HTTP request log for auth login endpoint" />
+    <MESSAGE value="feat: add HTTP request log and home page template&#10;&#10;chore: include new files for development environment and views" />
+    <MESSAGE value="feat: add index and login EJS templates&#10;&#10;Add initial view templates for home page and login form, including partial includes for header and footer." />
+    <MESSAGE value="feat: add initial User table migration&#10;&#10;Added User table with id, name, email, password, createdAt, and updatedAt fields. Includes unique email constraint and primary key." />
+    <MESSAGE value="chore: add prisma migration lock file for mysql" />
+    <MESSAGE value="chore: add initial package.json with project dependencies" />
+    <MESSAGE value=" page controller with basic route handlers&#10;&#10;Added controller functions for home, login, register, and dashboard pages" />
+    <MESSAGE value="feat: add page routes with auth middleware and protected dashboard route" />
+    <MESSAGE value="feat: add register view template with form and error handling" />
+    <MESSAGE value="feat: add Prisma schema with User model&#10;&#10;Added initial Prisma schema file with database configuration and User model definition." />
+    <MESSAGE value="feat: add initial Prisma schema and Express server setup&#10;&#10;Add User model to Prisma schema and configure basic Express server with auth routes" />
+    <MESSAGE value="test: add HTTP test file for auth login endpoint" />
+    <MESSAGE value="chore: add VCS configuration file for IntelliJ IDEA&#10;&#10;The file configures Git as the version control system for the project." />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
