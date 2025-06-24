@@ -2,6 +2,8 @@ import {PrismaClient} from '../../generated/prisma/index.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import Joi from 'joi';
+import crypto from 'crypto';
+import sendEmail from '../utils/sendEmail.js';
 
 const prisma = new PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -18,7 +20,145 @@ const loginSchema = Joi.object({
     password: Joi.string().required(),
 });
 
+const forgotPasswordSchema = Joi.object({
+    email: Joi.string().email().required(),
+});
+
+const resetPasswordSchema = Joi.object({
+    token: Joi.string().required(),
+    password: Joi.string().min(6).required(),
+    // Ensure confirmPassword matches password
+    confirmPassword: Joi.string().required().valid(Joi.ref('password')),
+});
+
 // --- Controller Functions ---
+
+export const forgotPassword = async (req, res) => {
+    try {
+        // 1. Validate email
+        const {error, value} = forgotPasswordSchema.validate(req.body);
+        if (error) {
+            return res.status(400).render('forgot-password', {
+                error: error.details[0].message,
+                message: null,
+                user: null
+            });
+        }
+        const {email} = value;
+
+        // 2. Find the user by email
+        const user = await prisma.user.findUnique({where: {email}});
+
+        // If a user exists, proceed with token generation and email sending
+        if (user) {
+            // 3. Generate a random reset token
+            const resetToken = crypto.randomBytes(32).toString('hex');
+
+            // 4. Hash token and set expiry (10 minutes)
+            const passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+            const passwordResetTokenExpires = new Date(Date.now() + 10 * 60 * 1000);
+
+            await prisma.user.update({
+                where: {email: user.email},
+                data: {passwordResetToken, passwordResetTokenExpires},
+            });
+
+            // 5. Send token to user's email
+            const resetURL = `${req.protocol}://${req.get('host')}/reset-password/${resetToken}`;
+            const message = `Forgot your password? Click the link to reset it: ${resetURL}\n\nThis link is valid for 10 minutes. If you didn't request this, please ignore this email.`;
+
+            try {
+                await sendEmail({
+                    email: user.email,
+                    subject: 'Your Password Reset Link (valid for 10 min)',
+                    message,
+                });
+            } catch (emailError) {
+                console.error('Email sending error:', emailError);
+                // Clear the token if email fails to prevent a locked-out state
+                await prisma.user.update({
+                    where: {email: user.email},
+                    data: {passwordResetToken: null, passwordResetTokenExpires: null},
+                });
+                return res.status(500).render('forgot-password', {
+                    error: 'There was an error sending the email. Please try again later.',
+                    message: null,
+                    user: null
+                });
+            }
+        }
+
+        // 6. Send a generic success message to prevent user enumeration
+        res.render('forgot-password', {
+            error: null,
+            message: 'If a user with that email exists, a password reset link has been sent.',
+            user: null
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).render('forgot-password', {error: 'An unexpected error occurred.', message: null, user: null});
+    }
+};
+
+export const resetPassword = async (req, res) => {
+    try {
+        // 1. Validate the form data
+        const {error, value} = resetPasswordSchema.validate(req.body, {abortEarly: false});
+        if (error) {
+            const errorMessage = error.details.map((d) => d.message).join('. ');
+            return res.status(400).render('reset-password', {error: errorMessage, token: req.body.token, user: null});
+        }
+        const {token, password} = value;
+
+        // 2. Hash the token from the request to match the one in the DB
+        const hashedToken = crypto.createHash('sha256').update(token).digest('hex');
+
+        // 3. Find the user by the hashed token and check if it's not expired
+        const user = await prisma.user.findFirst({
+            where: {
+                passwordResetToken: hashedToken,
+                passwordResetTokenExpires: {
+                    gte: new Date(), // gte = greater than or equal to now
+                },
+            },
+        });
+
+        // 4. If token is invalid or has expired, send an error
+        if (!user) {
+            return res.status(400).render('reset-password', {
+                error: 'Token is invalid or has expired.',
+                token: token,
+                user: null
+            });
+        }
+
+        // 5. If token is valid, hash new password and update user
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        await prisma.user.update({
+            where: {id: user.id},
+            data: {
+                password: hashedPassword,
+                passwordResetToken: null, // Clear the token
+                passwordResetTokenExpires: null,
+            },
+        });
+
+        // 6. Log the user out of any old sessions and redirect to login
+        res.clearCookie('token');
+        res.redirect('/login');
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).render('reset-password', {
+            error: 'An unexpected error occurred.',
+            token: req.body.token,
+            user: null
+        });
+    }
+};
+
 
 export const registerUser = async (req, res) => {
     try {
