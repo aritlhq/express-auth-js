@@ -5,7 +5,7 @@ import {
     getRegisterPage,
     getDashboardPage,
 } from '../controllers/pageController.js';
-import {protect, addUserToLocals} from '../middleware/authMiddleware.js';
+import {protect, addUserToLocals, redirectIfAuthenticated} from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
@@ -14,8 +14,8 @@ router.use(addUserToLocals);
 
 // Public Routes
 router.get('/', getHomePage);
-router.get('/login', getLoginPage);
-router.get('/register', getRegisterPage);
+router.get('/login', redirectIfAuthenticated, getLoginPage);
+router.get('/register', redirectIfAuthenticated, getRegisterPage);
 
 // Protected Route
 router.get('/dashboard', protect, getDashboardPage);
