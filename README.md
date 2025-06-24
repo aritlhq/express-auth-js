@@ -48,13 +48,13 @@ express-auth-js/
 │   ├── authRoutes.js
 │   └── pageRoutes.js
 └── views/
-├── dashboard.ejs
-├── index.ejs
-├── login.ejs
-├── register.ejs
-└── partials/
-├── footer.ejs
-└── header.ejs
+    ├── dashboard.ejs
+    ├── index.ejs
+    ├── login.ejs
+    ├── register.ejs
+    └── partials/
+        ├── footer.ejs
+        └── header.ejs
 ```
 
 ## 🚀 Getting Started

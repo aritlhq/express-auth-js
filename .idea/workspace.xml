@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="docs: Add comprehensive README.md for express-auth-js project">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,14 +293,21 @@
       <option name="project" value="LOCAL" />
       <updated>1750686677675</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="docs: Add comprehensive README.md for express-auth-js project">
+      <option name="closed" value="true" />
+      <created>1750767446560</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1750767446560</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: add JetBrains IDE workspace configuration file" />
     <MESSAGE value="chore: add .gitignore file with common exclusions" />
     <MESSAGE value="chore: Add HTTP request response snapshot for dashboard access" />
     <MESSAGE value="feat: add auth controller with register, login, and logout functionality" />
@@ -326,6 +332,7 @@
     <MESSAGE value="test: add HTTP test file for auth login endpoint" />
     <MESSAGE value="chore: add VCS configuration file for IntelliJ IDEA&#10;&#10;The file configures Git as the version control system for the project." />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="docs: Add comprehensive README.md for express-auth-js project" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: Add comprehensive README.md for express-auth-js project" />
   </component>
 </project>
