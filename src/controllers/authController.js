@@ -11,6 +11,7 @@ const registerSchema = Joi.object({
     name: Joi.string().min(3).required(),
     email: Joi.string().email().required(),
     password: Joi.string().min(6).required(),
+    role: Joi.string().valid('ADMIN', 'LECTURER', 'STUDENT').required()
 });
 
 const loginSchema = Joi.object({
@@ -27,9 +28,9 @@ export const registerUser = async (req, res) => {
         if (error) {
             return res.status(400).render('register', {error: error.details[0].message, user: null});
         }
-        const {name, email, password} = value;
+        const {name, email, password, role} = value;
 
-        // 2. Check if user already exists
+        // 2. Check if a user already exists
         const existingUser = await prisma.user.findUnique({where: {email}});
         if (existingUser) {
             return res.status(400).render('register', {error: 'Email already in use.', user: null});
@@ -44,6 +45,7 @@ export const registerUser = async (req, res) => {
                 name,
                 email,
                 password: hashedPassword,
+                role,
             },
         });
 
