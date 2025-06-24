@@ -8,6 +8,7 @@ import {fileURLToPath} from 'url';
 // Import Routes
 import authRoutes from './src/routes/authRoutes.js';
 import pageRoutes from './src/routes/pageRoutes.js';
+import todoRoutes from "./src/routes/todoRoutes.js";
 
 // Load environment variables
 dotenv.config();
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
 // Routes
 app.use('/auth', authRoutes);
 app.use('/', pageRoutes);
+app.use('/todos', todoRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
