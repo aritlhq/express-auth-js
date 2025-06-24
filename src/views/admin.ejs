@@ -1,0 +1,5 @@
+<%- include('partials/header', { user: user }) %>
+<h1>Admin Panel</h1>
+<p>This page is protected and only visible to users with the 'ADMIN' role.</p>
+<p>Welcome, Admin <%= user.name %>!</p>
+<%- include('partials/footer') %>
