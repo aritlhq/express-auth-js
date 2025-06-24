@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="docs: Fix indentation in project structure section of README.md">
-      <change afterPath="$PROJECT_DIR$/src/utils/sendEmail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/forgot-password.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/reset-password.ejs" afterDir="false" />
+    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/pageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/pageController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/pageRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/pageRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,26 +311,117 @@
       <option name="project" value="LOCAL" />
       <updated>1750767833429</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: add password reset functionality with email verification&#10;&#10;Add forgotPassword and resetPassword controller functions with token generation, validation, and email sending. Includes security measures like token hashing, expiry, and user enumeration protection.">
+      <option name="closed" value="true" />
+      <created>1750773512673</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773512673</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: add password reset endpoints to auth routes&#10;&#10;Added forgot-password and reset-password endpoints to authRoutes.js">
+      <option name="closed" value="true" />
+      <created>1750773538397</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773538397</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: add forgot password view template&#10;&#10;Added new EJS template for forgot password functionality with email input form, error/success message display, and header/footer includes.">
+      <option name="closed" value="true" />
+      <created>1750773547854</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773547854</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: add forgot password link to login page">
+      <option name="closed" value="true" />
+      <created>1750773581937</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773581937</updated>
+    </task>
+    <task id="LOCAL-00032" summary="chore: add nodemailer dependency to package.json">
+      <option name="closed" value="true" />
+      <created>1750773591954</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773591954</updated>
+    </task>
+    <task id="LOCAL-00033" summary="chore: add nodemailer dependency to package-lock.json">
+      <option name="closed" value="true" />
+      <created>1750773601636</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773601636</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat: add password reset functionality to page controller&#10;&#10;Added getForgotPasswordPage and getResetPasswordPage handlers with token validation. Integrated Prisma for database operations and crypto for token hashing.">
+      <option name="closed" value="true" />
+      <created>1750773610912</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773610912</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: add forgot and reset password routes to pageRoutes&#10;&#10;Add getForgotPasswordPage and getResetPasswordPage routes with redirectIfAuthenticated middleware">
+      <option name="closed" value="true" />
+      <created>1750773620508</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773620508</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat: add reset password view template&#10;&#10;Add reset-password.ejs template for password reset functionality, including form fields for new password and confirmation.">
+      <option name="closed" value="true" />
+      <created>1750773629830</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773629830</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat: add password reset fields to User model&#10;&#10;Added passwordResetToken and passwordResetTokenExpires fields to support password reset functionality.">
+      <option name="closed" value="true" />
+      <created>1750773639393</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773639393</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat: add email sending utility with nodemailer&#10;&#10;Add new sendEmail utility function for sending emails using nodemailer with configurable options via environment variables.">
+      <option name="closed" value="true" />
+      <created>1750773650399</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773650399</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat: Add password reset functionality&#10;&#10;Added new email utility, views, and updated auth controllers/routes to support password reset flow. Modified schema and package dependencies accordingly.">
+      <option name="closed" value="true" />
+      <created>1750773661778</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773661779</updated>
+    </task>
+    <task id="LOCAL-00040" summary="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model">
+      <option name="closed" value="true" />
+      <created>1750773674887</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773674887</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: Add HTTP request response snapshot for dashboard access" />
-    <MESSAGE value="feat: add auth controller with register, login, and logout functionality" />
-    <MESSAGE value="feat: add auth middleware with JWT verification and user handling&#10;&#10;Add protect middleware for route authentication and addUserToLocals for template access" />
-    <MESSAGE value="feat: add auth middleware and routes for user authentication&#10;&#10;Add auth middleware with protect and addUserToLocals functions&#10;Add auth routes for register, login, and logout operations" />
-    <MESSAGE value="feat: add dashboard view with user greeting and protected content&#10;&#10;Added new dashboard.ejs template displaying welcome message and user details" />
-    <MESSAGE value="feat: add dashboard view for authenticated users&#10;&#10;The commit adds a new dashboard.ejs view that displays user information and welcome" />
-    <MESSAGE value=" message for logged-in users. The view includes header and footer partials and showsfe protected content.at: add footer partial" />
-    <MESSAGE value="feat: add header and footer partials for views" />
-    <MESSAGE value="feat: add header partial with auth navigation&#10;&#10;Add header.ejs template with conditional navigation links for authenticated users. Includes login/logout functionality and basic page" />
-    <MESSAGE value="chore: add HTTP request log for auth login endpoint" />
-    <MESSAGE value="feat: add HTTP request log and home page template&#10;&#10;chore: include new files for development environment and views" />
-    <MESSAGE value="feat: add index and login EJS templates&#10;&#10;Add initial view templates for home page and login form, including partial includes for header and footer." />
-    <MESSAGE value="feat: add initial User table migration&#10;&#10;Added User table with id, name, email, password, createdAt, and updatedAt fields. Includes unique email constraint and primary key." />
     <MESSAGE value="chore: add prisma migration lock file for mysql" />
     <MESSAGE value="chore: add initial package.json with project dependencies" />
     <MESSAGE value=" page controller with basic route handlers&#10;&#10;Added controller functions for home, login, register, and dashboard pages" />
@@ -353,6 +434,19 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="docs: Add comprehensive README.md for express-auth-js project" />
     <MESSAGE value="docs: Fix indentation in project structure section of README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: Fix indentation in project structure section of README.md" />
+    <MESSAGE value="feat: add password reset functionality with email verification&#10;&#10;Add forgotPassword and resetPassword controller functions with token generation, validation, and email sending. Includes security measures like token hashing, expiry, and user enumeration protection." />
+    <MESSAGE value="feat: add password reset endpoints to auth routes&#10;&#10;Added forgot-password and reset-password endpoints to authRoutes.js" />
+    <MESSAGE value="feat: add forgot password view template&#10;&#10;Added new EJS template for forgot password functionality with email input form, error/success message display, and header/footer includes." />
+    <MESSAGE value="feat: add forgot password link to login page" />
+    <MESSAGE value="chore: add nodemailer dependency to package.json" />
+    <MESSAGE value="chore: add nodemailer dependency to package-lock.json" />
+    <MESSAGE value="feat: add password reset functionality to page controller&#10;&#10;Added getForgotPasswordPage and getResetPasswordPage handlers with token validation. Integrated Prisma for database operations and crypto for token hashing." />
+    <MESSAGE value="feat: add forgot and reset password routes to pageRoutes&#10;&#10;Add getForgotPasswordPage and getResetPasswordPage routes with redirectIfAuthenticated middleware" />
+    <MESSAGE value="feat: add reset password view template&#10;&#10;Add reset-password.ejs template for password reset functionality, including form fields for new password and confirmation." />
+    <MESSAGE value="feat: add password reset fields to User model&#10;&#10;Added passwordResetToken and passwordResetTokenExpires fields to support password reset functionality." />
+    <MESSAGE value="feat: add email sending utility with nodemailer&#10;&#10;Add new sendEmail utility function for sending emails using nodemailer with configurable options via environment variables." />
+    <MESSAGE value="feat: Add password reset functionality&#10;&#10;Added new email utility, views, and updated auth controllers/routes to support password reset flow. Modified schema and package dependencies accordingly." />
+    <MESSAGE value="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model" />
   </component>
 </project>

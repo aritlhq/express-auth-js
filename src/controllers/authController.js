@@ -124,7 +124,7 @@ export const resetPassword = async (req, res) => {
             },
         });
 
-        // 4. If token is invalid or has expired, send an error
+        // 4. If the token is invalid or has expired, send an error
         if (!user) {
             return res.status(400).render('reset-password', {
                 error: 'Token is invalid or has expired.',
@@ -133,7 +133,7 @@ export const resetPassword = async (req, res) => {
             });
         }
 
-        // 5. If token is valid, hash new password and update user
+        // 5. If the token is valid, hash a new password and update the user
         const hashedPassword = await bcrypt.hash(password, 10);
 
         await prisma.user.update({
