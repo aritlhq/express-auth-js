@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="chore: update IDE workspace configuration with recent changes&#10;&#10;feat: add .env-example file to project">
-      <change afterPath="$PROJECT_DIR$/src/views/admin.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/unauthorized.ejs" afterDir="false" />
+    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="feat: add initial User table schema with Prisma migration&#10;&#10;Added initial database schema for User model with fields for authentication and role management.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20250623132509_init/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/migration_lock.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/pageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/pageController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/pageRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/pageRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748554004702</updated>
       <workItem from="1748554009270" duration="253000" />
-      <workItem from="1750667540621" duration="14158000" />
+      <workItem from="1750667540621" duration="15402000" />
     </task>
     <task id="LOCAL-00001" summary="chore: add JetBrains IDE workspace configuration file">
       <option name="closed" value="true" />
@@ -320,25 +309,117 @@
       <option name="project" value="LOCAL" />
       <updated>1750758824109</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: add admin panel view with role-based access control">
+      <option name="closed" value="true" />
+      <created>1750760432357</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760432357</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: add role field to user registration validation and creation&#10;&#10;Added role field with valid options (ADMIN, LECTURER, STUDENT) to Joi validation schema and user creation in authController. Updated error message for existing user check.">
+      <option name="closed" value="true" />
+      <created>1750760443565</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760443565</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: add role-based authorization and auth middleware improvements&#10;&#10;- Include user role in auth middleware queries&#10;- Add new authorize middleware for role-based access control&#10;- Add redirectIfAuthenticated middleware&#10;- Improve error handling and comments">
+      <option name="closed" value="true" />
+      <created>1750760454628</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760454628</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: Add admin panel link to header for ADMIN users">
+      <option name="closed" value="true" />
+      <created>1750760466477</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760466477</updated>
+    </task>
+    <task id="LOCAL-00032" summary="chore: remove initial migration file for User table">
+      <option name="closed" value="true" />
+      <created>1750760476339</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760476339</updated>
+    </task>
+    <task id="LOCAL-00033" summary="chore: remove prisma migration_lock.toml file">
+      <option name="closed" value="true" />
+      <created>1750760485371</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760485371</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat: add admin page controller&#10;&#10;Add new getAdminPage controller function to handle admin page rendering">
+      <option name="closed" value="true" />
+      <created>1750760496531</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760496532</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: add admin page route and auth middleware updates&#10;&#10;- Add getAdminPage controller import and admin route with protect/authorize&#10;- Add redirectIfAuthenticated to login/register routes&#10;- Import new authorize and redirectIfAuthenticated middleware">
+      <option name="closed" value="true" />
+      <created>1750760506659</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760506659</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat: add role selection dropdown to registration form">
+      <option name="closed" value="true" />
+      <created>1750760516105</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760516105</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat: add Role enum and field to User model&#10;&#10;Added Role enum with ADMIN, LECTURER, and STUDENT values. Included role field in User model with default STUDENT value.">
+      <option name="closed" value="true" />
+      <created>1750760528967</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760528967</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat: add unauthorized access view template&#10;&#10;Add new EJS template for displaying 403 unauthorized access error page with link back to dashboard.">
+      <option name="closed" value="true" />
+      <created>1750760539156</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760539156</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat: add unauthorized access view template&#10;&#10;Add new EJS template for displaying 403 unauthorized access error page with link back to dashboard.">
+      <option name="closed" value="true" />
+      <created>1750760544655</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760544655</updated>
+    </task>
+    <task id="LOCAL-00040" summary="feat: add initial User table schema with Prisma migration&#10;&#10;Added initial database schema for User model with fields for authentication and role management.">
+      <option name="closed" value="true" />
+      <created>1750760554564</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1750760554564</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: Add HTTP request response snapshot for dashboard access" />
-    <MESSAGE value="feat: add auth controller with register, login, and logout functionality" />
-    <MESSAGE value="feat: add auth middleware with JWT verification and user handling&#10;&#10;Add protect middleware for route authentication and addUserToLocals for template access" />
-    <MESSAGE value="feat: add auth middleware and routes for user authentication&#10;&#10;Add auth middleware with protect and addUserToLocals functions&#10;Add auth routes for register, login, and logout operations" />
-    <MESSAGE value="feat: add dashboard view with user greeting and protected content&#10;&#10;Added new dashboard.ejs template displaying welcome message and user details" />
-    <MESSAGE value="feat: add dashboard view for authenticated users&#10;&#10;The commit adds a new dashboard.ejs view that displays user information and welcome" />
-    <MESSAGE value=" message for logged-in users. The view includes header and footer partials and showsfe protected content.at: add footer partial" />
-    <MESSAGE value="feat: add header and footer partials for views" />
-    <MESSAGE value="feat: add header partial with auth navigation&#10;&#10;Add header.ejs template with conditional navigation links for authenticated users. Includes login/logout functionality and basic page" />
-    <MESSAGE value="chore: add HTTP request log for auth login endpoint" />
-    <MESSAGE value="feat: add HTTP request log and home page template&#10;&#10;chore: include new files for development environment and views" />
-    <MESSAGE value="feat: add index and login EJS templates&#10;&#10;Add initial view templates for home page and login form, including partial includes for header and footer." />
     <MESSAGE value="feat: add initial User table migration&#10;&#10;Added User table with id, name, email, password, createdAt, and updatedAt fields. Includes unique email constraint and primary key." />
     <MESSAGE value="chore: add prisma migration lock file for mysql" />
     <MESSAGE value="chore: add initial package.json with project dependencies" />
@@ -352,6 +433,18 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="docs: add .env-example file with Prisma configuration" />
     <MESSAGE value="chore: update IDE workspace configuration with recent changes&#10;&#10;feat: add .env-example file to project" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update IDE workspace configuration with recent changes&#10;&#10;feat: add .env-example file to project" />
+    <MESSAGE value="feat: add admin panel view with role-based access control" />
+    <MESSAGE value="feat: add role field to user registration validation and creation&#10;&#10;Added role field with valid options (ADMIN, LECTURER, STUDENT) to Joi validation schema and user creation in authController. Updated error message for existing user check." />
+    <MESSAGE value="feat: add role-based authorization and auth middleware improvements&#10;&#10;- Include user role in auth middleware queries&#10;- Add new authorize middleware for role-based access control&#10;- Add redirectIfAuthenticated middleware&#10;- Improve error handling and comments" />
+    <MESSAGE value="feat: Add admin panel link to header for ADMIN users" />
+    <MESSAGE value="chore: remove initial migration file for User table" />
+    <MESSAGE value="chore: remove prisma migration_lock.toml file" />
+    <MESSAGE value="feat: add admin page controller&#10;&#10;Add new getAdminPage controller function to handle admin page rendering" />
+    <MESSAGE value="feat: add admin page route and auth middleware updates&#10;&#10;- Add getAdminPage controller import and admin route with protect/authorize&#10;- Add redirectIfAuthenticated to login/register routes&#10;- Import new authorize and redirectIfAuthenticated middleware" />
+    <MESSAGE value="feat: add role selection dropdown to registration form" />
+    <MESSAGE value="feat: add Role enum and field to User model&#10;&#10;Added Role enum with ADMIN, LECTURER, and STUDENT values. Included role field in User model with default STUDENT value." />
+    <MESSAGE value="feat: add unauthorized access view template&#10;&#10;Add new EJS template for displaying 403 unauthorized access error page with link back to dashboard." />
+    <MESSAGE value="feat: add initial User table schema with Prisma migration&#10;&#10;Added initial database schema for User model with fields for authentication and role management." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add initial User table schema with Prisma migration&#10;&#10;Added initial database schema for User model with fields for authentication and role management." />
   </component>
 </project>
