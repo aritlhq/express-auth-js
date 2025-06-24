@@ -3,4 +3,123 @@
 <h2>Welcome, <%= user.name %>!</h2>
 <p>This is a protected page. Only logged-in users can see this.</p>
 <p>Your email is: <%= user.email %></p>
+
+<hr>
+
+<div class="todo-container">
+    <h3>My Todos</h3>
+    <% if (error) { %>
+        <p class="error"><%= error %></p>
+    <% } %>
+
+    <form action="/todos" method="POST" class="todo-form">
+        <input type="text" name="title" placeholder="Add a new todo..." required>
+        <button type="submit">Add Todo</button>
+    </form>
+
+    <ul class="todo-list">
+        <% if (todos && todos.length > 0) { %>
+            <% todos.forEach(todo => { %>
+                <li class="todo-item <%= todo.completed ? 'completed' : '' %>">
+                    <div class="todo-content" id="view-<%= todo.id %>">
+                        <span class="todo-title"><%= todo.title %></span>
+                        <div class="todo-actions">
+                            <form action="/todos/<%= todo.id %>/toggle" method="POST" style="display:inline;">
+                                <button type="submit"
+                                        class="toggle-btn"><%= todo.completed ? 'Undo' : 'Complete' %></button>
+                            </form>
+                            <button type="button" class="edit-btn" onclick="handleEditClick('<%= todo.id %>')">Edit
+                            </button>
+                            <form action="/todos/<%= todo.id %>/delete" method="POST" style="display:inline;">
+                                <button type="submit" class="delete-btn">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="todo-edit-container" id="edit-<%= todo.id %>" style="display:none;">
+                        <form action="/todos/<%= todo.id %>/update" method="POST" class="todo-edit-form"
+                              onsubmit="return handleSaveSubmit('<%= todo.id %>')">
+                            <input type="text" name="title" value="<%= todo.title %>" class="todo-edit-input"
+                                   required>
+                            <div class="todo-edit-actions">
+                                <button type="submit" class="save-btn">Save</button>
+                                <button type="button" class="cancel-btn" onclick="handleCancelClick('<%= todo.id %>')">
+                                    Cancel
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>You have no todos yet!</li>
+        <% } %>
+    </ul>
+</div>
+
+
+<script>
+    const STORAGE_KEY = 'editingTodoIds';
+
+    // ---- Storage Helpers ----
+    function getEditingIds() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        return stored ? new Set(JSON.parse(stored)) : new Set();
+    }
+
+    function saveEditingIds(ids) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(ids)));
+    }
+
+    // ---- DOM Manipulation ----
+    function setViewMode(todoId) {
+        document.getElementById(`view-${todoId}`).style.display = 'flex';
+        document.getElementById(`edit-${todoId}`).style.display = 'none';
+    }
+
+    function setEditMode(todoId) {
+        document.getElementById(`view-${todoId}`).style.display = 'none';
+        document.getElementById(`edit-${todoId}`).style.display = 'block';
+        document.querySelector(`#edit-${todoId} input`).focus();
+    }
+
+    // ---- Event Handlers ----
+    function handleEditClick(todoId) {
+        setEditMode(todoId);
+        const ids = getEditingIds();
+        ids.add(todoId);
+        saveEditingIds(ids);
+    }
+
+    function handleCancelClick(todoId) {
+        setViewMode(todoId);
+        const ids = getEditingIds();
+        ids.delete(todoId);
+        saveEditingIds(ids);
+    }
+
+    function handleSaveSubmit(todoId) {
+        const ids = getEditingIds();
+        ids.delete(todoId);
+        saveEditingIds(ids);
+        return true; // Proceed with form submission
+    }
+
+    // ---- Page Load Logic ----
+    document.addEventListener('DOMContentLoaded', () => {
+        const idsToRestore = getEditingIds();
+        const existingIds = new Set();
+
+        idsToRestore.forEach(todoId => {
+            if (document.getElementById(`view-${todoId}`)) {
+                setEditMode(todoId);
+                existingIds.add(todoId);
+            }
+        });
+
+        // Clean up storage by saving only the IDs that still exist on the page
+        saveEditingIds(existingIds);
+    });
+</script>
+
+
 <%- include('partials/footer') %>
