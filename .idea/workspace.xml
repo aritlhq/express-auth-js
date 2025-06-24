@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model">
+    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="fix: correct token validation logic in password reset flow&#10;&#10;Updated authController.js to improve token validation messaging and password update comments for better clarity in password reset functionality.">
+      <change beforePath="$PROJECT_DIR$/.env-example" beforeDir="false" afterPath="$PROJECT_DIR$/.env-example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "otp",
+    "git-widget-placeholder": "pw-reset-link",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -415,14 +416,21 @@
       <option name="project" value="LOCAL" />
       <updated>1750773674887</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fix: correct token validation logic in password reset flow&#10;&#10;Updated authController.js to improve token validation messaging and password update comments for better clarity in password reset functionality.">
+      <option name="closed" value="true" />
+      <created>1750773829305</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1750773829305</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: add prisma migration lock file for mysql" />
     <MESSAGE value="chore: add initial package.json with project dependencies" />
     <MESSAGE value=" page controller with basic route handlers&#10;&#10;Added controller functions for home, login, register, and dashboard pages" />
     <MESSAGE value="feat: add page routes with auth middleware and protected dashboard route" />
@@ -447,6 +455,7 @@
     <MESSAGE value="feat: add email sending utility with nodemailer&#10;&#10;Add new sendEmail utility function for sending emails using nodemailer with configurable options via environment variables." />
     <MESSAGE value="feat: Add password reset functionality&#10;&#10;Added new email utility, views, and updated auth controllers/routes to support password reset flow. Modified schema and package dependencies accordingly." />
     <MESSAGE value="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model" />
+    <MESSAGE value="fix: correct token validation logic in password reset flow&#10;&#10;Updated authController.js to improve token validation messaging and password update comments for better clarity in password reset functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: correct token validation logic in password reset flow&#10;&#10;Updated authController.js to improve token validation messaging and password update comments for better clarity in password reset functionality." />
   </component>
 </project>
