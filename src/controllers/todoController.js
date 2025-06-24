@@ -3,6 +3,7 @@ import Joi from 'joi';
 
 const prisma = new PrismaClient();
 
+// --- Validation Schemas ---
 const todoSchema = Joi.object({
     title: Joi.string().min(1).required(),
 });
