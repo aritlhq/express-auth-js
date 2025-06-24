@@ -3,7 +3,7 @@ import {
     getHomePage,
     getLoginPage,
     getRegisterPage,
-    getDashboardPage,
+    getDashboardPage, getForgotPasswordPage, getResetPasswordPage,
 } from '../controllers/pageController.js';
 import {protect, addUserToLocals, redirectIfAuthenticated} from '../middleware/authMiddleware.js';
 
@@ -16,6 +16,8 @@ router.use(addUserToLocals);
 router.get('/', getHomePage);
 router.get('/login', redirectIfAuthenticated, getLoginPage);
 router.get('/register', redirectIfAuthenticated, getRegisterPage);
+router.get('/forgot-password', redirectIfAuthenticated, getForgotPasswordPage);
+router.get('/reset-password/:token', redirectIfAuthenticated, getResetPasswordPage);
 
 // Protected Route
 router.get('/dashboard', protect, getDashboardPage);
