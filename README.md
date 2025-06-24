@@ -39,22 +39,22 @@ express-auth-js/
 │   └── migrations/
 │       └── ...
 └── src/
-├── controllers/
-│   ├── authController.js
-│   └── pageController.js
-├── middleware/
-│   └── authMiddleware.js
-├── routes/
-│   ├── authRoutes.js
-│   └── pageRoutes.js
-└── views/
-    ├── dashboard.ejs
-    ├── index.ejs
-    ├── login.ejs
-    ├── register.ejs
-    └── partials/
-        ├── footer.ejs
-        └── header.ejs
+    ├── controllers/
+    │   ├── authController.js
+    │   └── pageController.js
+    ├── middleware/
+    │   └── authMiddleware.js
+    ├── routes/
+    │   ├── authRoutes.js
+    │   └── pageRoutes.js
+    └── views/
+        ├── dashboard.ejs
+        ├── index.ejs
+        ├── login.ejs
+        ├── register.ejs
+        └── partials/
+            ├── footer.ejs
+            └── header.ejs
 ```
 
 ## 🚀 Getting Started
