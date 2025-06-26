@@ -78,4 +78,4 @@ export const redirectIfAuthenticated = (req, res, next) => {
         return res.redirect('/dashboard');
     }
     next();
-};
+}; 
