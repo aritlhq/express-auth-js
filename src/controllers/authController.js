@@ -169,7 +169,7 @@ export const registerUser = async (req, res) => {
         }
         const {name, email, password} = value;
 
-        // 2. Check if user already exists
+        // 2. Check if a user already exists
         const existingUser = await prisma.user.findUnique({where: {email}});
         if (existingUser) {
             return res.status(400).render('register', {error: 'Email already in use.', user: null});
