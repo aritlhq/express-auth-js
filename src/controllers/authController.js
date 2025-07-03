@@ -25,14 +25,16 @@ export const registerUser = async (req, res) => {
         // 1. Validate user input
         const {error, value} = registerSchema.validate(req.body);
         if (error) {
-            return res.status(400).render('register', {error: error.details[0].message, user: null});
+            // return res.status(400).render('register', {error: error.details[0].message, user: null});
+            return res.status(400).json({error: error.details[0].message});
         }
         const {name, email, password} = value;
 
         // 2. Check if user already exists
         const existingUser = await prisma.user.findUnique({where: {email}});
         if (existingUser) {
-            return res.status(400).render('register', {error: 'Email already in use.', user: null});
+            // return res.status(400).render('register', {error: 'Email already in use.', user: null});
+            return res.status(400).json({error: 'Email already in use.'});
         }
 
         // 3. Hash the password
@@ -48,10 +50,12 @@ export const registerUser = async (req, res) => {
         });
 
         // 5. Redirect to login page
-        res.redirect('/login');
+        // res.redirect('/login');
+        res.status(201).json({message: 'User registered successfully.'});
     } catch (error) {
         console.error(error);
-        res.status(500).render('register', {error: 'An unexpected error occurred.', user: null});
+        // res.status(500).render('register', {error: 'An unexpected error occurred.', user: null});
+        res.status(500).json({error: 'An unexpected error occurred.'});
     }
 };
 
@@ -60,20 +64,23 @@ export const loginUser = async (req, res) => {
         // 1. Validate user input
         const {error, value} = loginSchema.validate(req.body);
         if (error) {
-            return res.status(400).render('login', {error: error.details[0].message, user: null});
+            // return res.status(400).render('login', {error: error.details[0].message, user: null});
+            return res.status(400).json({error: error.details[0].message});
         }
         const {email, password} = value;
 
         // 2. Find the user by email
         const user = await prisma.user.findUnique({where: {email}});
         if (!user) {
-            return res.status(401).render('login', {error: 'Invalid email or password.', user: null});
+            // return res.status(401).render('login', {error: 'Invalid email or password.', user: null});
+            return res.status(401).json({error: 'Invalid email or password.'});
         }
 
         // 3. Compare passwords
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            return res.status(401).render('login', {error: 'Invalid email or password.', user: null});
+            // return res.status(401).render('login', {error: 'Invalid email or password.', user: null});
+            return res.status(401).json({error: 'Invalid email or password.'});
         }
 
         // 4. Generate JWT
@@ -89,14 +96,17 @@ export const loginUser = async (req, res) => {
         });
 
         // 6. Redirect to the dashboard
-        res.redirect('/dashboard');
+        // res.redirect('/dashboard');
+        res.status(200).json({message: 'Login successful.'});
     } catch (error) {
         console.error(error);
-        res.status(500).render('login', {error: 'An unexpected error occurred.', user: null});
+        // res.status(500).render('login', {error: 'An unexpected error occurred.', user: null});
+        res.status(500).json({error: 'An unexpected error occurred.'});
     }
 };
 
 export const logoutUser = (req, res) => {
     res.clearCookie('token');
-    res.redirect('/login');
+    // res.redirect('/login');
+    res.status(200).json({message: 'Logout successful.'});
 };
