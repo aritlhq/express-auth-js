@@ -18,6 +18,9 @@ I also added a few additional branches with different features according to thei
 - [todo-list](https://github.com/aritlhq/express-auth-js/tree/todo-list)
 - [pw-reset-link](https://github.com/aritlhq/express-auth-js/tree/pw-reset-link)
 
+Frontend Framework:
+- [vue](https://github.com/aritlhq/express-auth-js/tree/vue)
+
 ## 🛠️ Tech Stack
 
 - Backend: Node.js, Express.js
