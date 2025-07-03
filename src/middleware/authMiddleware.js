@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import {PrismaClient} from '../../generated/prisma/index.js';
+import {PrismaClient} from "../../generated/prisma/index.js";
 
 const prisma = new PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -9,73 +9,32 @@ export const protect = async (req, res, next) => {
     const token = req.cookies.token;
 
     if (!token) {
-        return res.status(401).redirect('/login');
+        return res.status(401).send('Not authorized, no token');
     }
 
     try {
-        // Verify the token
-        const decoded = jwt.verify(token, JWT_SECRET);
-
-        // Find the user by ID from the token payload but exclude the password
+        const decode = jwt.verify(token, JWT_SECRET);
         const user = await prisma.user.findUnique({
-            where: {id: decoded.userId},
-            select: {id: true, name: true, email: true, createdAt: true},
+            where: {
+                id: decode.userId
+            },
+            select: {
+                id: true,
+                name: true,
+                email: true,
+                createdAt: true,
+            }
         });
 
         if (!user) {
-            return res.status(401).redirect('/login');
+            return res.status(401).send('Not authorized, user not found');
         }
 
-        // Attach the user object to the request
         req.user = user;
         next();
     } catch (error) {
-        // If the token is invalid or expired
         console.error(error);
         res.clearCookie('token');
-        return res.status(401).redirect('/login');
+        return res.status(401).send('Not authorized, token failed');
     }
-};
-
-// Middleware to add user data to res.locals if they are logged in
-// This makes the user object available in all EJS templates
-export const addUserToLocals = async (req, res, next) => {
-    const token = req.cookies.token;
-
-    if (!token) {
-        res.locals.user = null;
-        return next();
-    }
-
-    try {
-        const decoded = jwt.verify(token, JWT_SECRET);
-        const user = await prisma.user.findUnique({
-            where: {id: decoded.userId},
-            select: {id: true, name: true, email: true},
-        });
-        res.locals.user = user || null;
-    } catch (error) {
-        res.locals.user = null;
-    }
-    next();
-};
-
-export const authorize = (roles) => {
-    return (req, res, next) => {
-        if (!req.user || !roles.includes(req.user.role)) {
-            // Render a 403 Forbidden page
-            return res.status(403).render('unauthorized', {user: req.user});
-        }
-        next();
-    }
-};
-
-export const redirectIfAuthenticated = (req, res, next) => {
-    const token = req.cookies.token;
-
-    // If a token exists, it means the user is logged in
-    if (token) {
-        return res.redirect('/dashboard');
-    }
-    next();
-};
+}
