@@ -14,7 +14,7 @@ A robust starter template for building secure web applications with Node.js, Exp
 - MVC-like Structure: Organized code with controllers, routes, middleware, and views for maintainability.
 
 I also added a few additional branches with different features according to their names:
-- [with-roles](https://github.com/aritlhq/express-auth-js/tree/todo-list)
+- [with-roles](https://github.com/aritlhq/express-auth-js/tree/with-roles)
 - [todo-list](https://github.com/aritlhq/express-auth-js/tree/todo-list)
 - [pw-reset-link](https://github.com/aritlhq/express-auth-js/tree/pw-reset-link)
 
