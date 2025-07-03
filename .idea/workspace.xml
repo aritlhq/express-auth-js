@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="feat: Add user routes&#10;&#10;This commit adds the user routes with a /me endpoint.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="feat: Add Vite and Vue logos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.vscode/extensions.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,111 +118,7 @@
       <workItem from="1751564914094" duration="614000" />
       <workItem from="1751565561449" duration="40000" />
       <workItem from="1751565620089" duration="37000" />
-      <workItem from="1751565673419" duration="2390000" />
-    </task>
-    <task id="LOCAL-00001" summary="chore: add JetBrains IDE workspace configuration file">
-      <option name="closed" value="true" />
-      <created>1750686396107</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686396107</updated>
-    </task>
-    <task id="LOCAL-00002" summary="chore: add .gitignore file with common exclusions">
-      <option name="closed" value="true" />
-      <created>1750686404495</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686404495</updated>
-    </task>
-    <task id="LOCAL-00003" summary="chore: Add HTTP request response snapshot for dashboard access">
-      <option name="closed" value="true" />
-      <created>1750686411467</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686411467</updated>
-    </task>
-    <task id="LOCAL-00004" summary="feat: add auth controller with register, login, and logout functionality">
-      <option name="closed" value="true" />
-      <created>1750686480673</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686480673</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feat: add auth middleware with JWT verification and user handling&#10;&#10;Add protect middleware for route authentication and addUserToLocals for template access">
-      <option name="closed" value="true" />
-      <created>1750686489917</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686489917</updated>
-    </task>
-    <task id="LOCAL-00006" summary="feat: add auth middleware and routes for user authentication&#10;&#10;Add auth middleware with protect and addUserToLocals functions&#10;Add auth routes for register, login, and logout operations">
-      <option name="closed" value="true" />
-      <created>1750686497920</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686497920</updated>
-    </task>
-    <task id="LOCAL-00007" summary="feat: add dashboard view with user greeting and protected content&#10;&#10;Added new dashboard.ejs template displaying welcome message and user details">
-      <option name="closed" value="true" />
-      <created>1750686506609</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686506609</updated>
-    </task>
-    <task id="LOCAL-00008" summary="feat: add dashboard view for authenticated users&#10;&#10;The commit adds a new dashboard.ejs view that displays user information and welcome">
-      <option name="closed" value="true" />
-      <created>1750686517226</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686517226</updated>
-    </task>
-    <task id="LOCAL-00009" summary=" message for logged-in users. The view includes header and footer partials and showsfe protected content.at: add footer partial with closing HTML tags">
-      <option name="closed" value="true" />
-      <created>1750686524099</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686524099</updated>
-    </task>
-    <task id="LOCAL-00010" summary="feat: add header and footer partials for views">
-      <option name="closed" value="true" />
-      <created>1750686531154</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686531154</updated>
-    </task>
-    <task id="LOCAL-00011" summary="feat: add header partial with auth navigation&#10;&#10;Add header.ejs template with conditional navigation links for authenticated users. Includes login/logout functionality and basic page structure.">
-      <option name="closed" value="true" />
-      <created>1750686537854</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686537854</updated>
-    </task>
-    <task id="LOCAL-00012" summary="chore: add HTTP request log for auth login endpoint">
-      <option name="closed" value="true" />
-      <created>1750686562880</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686562880</updated>
-    </task>
-    <task id="LOCAL-00013" summary="feat: add HTTP request log and home page template&#10;&#10;chore: include new files for development environment and views">
-      <option name="closed" value="true" />
-      <created>1750686570023</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686570023</updated>
+      <workItem from="1751565673419" duration="2570000" />
     </task>
     <task id="LOCAL-00014" summary="feat: add index and login EJS templates&#10;&#10;Add initial view templates for home page and login form, including partial includes for header and footer.">
       <option name="closed" value="true" />
@@ -503,27 +400,125 @@
       <option name="project" value="LOCAL" />
       <updated>1751586404305</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="chore: gitignore: Add .idea folder">
+      <option name="closed" value="true" />
+      <created>1751586514711</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586514711</updated>
+    </task>
+    <task id="LOCAL-00050" summary="chore: Update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1751586527680</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586527680</updated>
+    </task>
+    <task id="LOCAL-00051" summary="chore: Add .gitignore for client">
+      <option name="closed" value="true" />
+      <created>1751586547037</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586547037</updated>
+    </task>
+    <task id="LOCAL-00052" summary="feat: Add App.vue layout with Navbar and router-view">
+      <option name="closed" value="true" />
+      <created>1751586551463</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586551463</updated>
+    </task>
+    <task id="LOCAL-00053" summary="feat: vscode - Add volar extension recommendation">
+      <option name="closed" value="true" />
+      <created>1751586564736</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586564736</updated>
+    </task>
+    <task id="LOCAL-00054" summary="feat: Add initial client HTML">
+      <option name="closed" value="true" />
+      <created>1751586569922</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586569922</updated>
+    </task>
+    <task id="LOCAL-00055" summary="feat: Initialize Vue app with Pinia and router">
+      <option name="closed" value="true" />
+      <created>1751586573976</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586573976</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat: Add Navbar component">
+      <option name="closed" value="true" />
+      <created>1751586577215</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586577215</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat: client: Add client package.json">
+      <option name="closed" value="true" />
+      <created>1751586585013</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586585013</updated>
+    </task>
+    <task id="LOCAL-00058" summary="chore: Add package-lock.json for client">
+      <option name="closed" value="true" />
+      <created>1751586588625</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586588625</updated>
+    </task>
+    <task id="LOCAL-00059" summary="docs: Add README to client">
+      <option name="closed" value="true" />
+      <created>1751586595713</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586595713</updated>
+    </task>
+    <task id="LOCAL-00060" summary="feat: Add basic styling to client app">
+      <option name="closed" value="true" />
+      <created>1751586598950</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586598950</updated>
+    </task>
+    <task id="LOCAL-00061" summary="feat: Add Vite configuration file">
+      <option name="closed" value="true" />
+      <created>1751586603393</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586603393</updated>
+    </task>
+    <task id="LOCAL-00062" summary="feat: Add Vite and Vue logos">
+      <option name="closed" value="true" />
+      <created>1751586608301</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586608301</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="docs: Add comprehensive README.md for express-auth-js project" />
-    <MESSAGE value="docs: Fix indentation in project structure section of README.md" />
-    <MESSAGE value="feat: api.js: Add API client using axios" />
-    <MESSAGE value="feat: api Add api service" />
-    <MESSAGE value="feat(auth): Add auth store with login, register, logout" />
-    <MESSAGE value="refactor(auth): Switch to JSON responses for auth routes" />
-    <MESSAGE value="refactor(authMiddleware): Improve authentication handling" />
-    <MESSAGE value="chore: Remove unused dashboard view" />
-    <MESSAGE value="feat: Add initial Dashboard view" />
-    <MESSAGE value="chore: Remove unused footer partial" />
-    <MESSAGE value="chore: Remove unused header partial" />
-    <MESSAGE value="feat: Add initial Home view&#10;&#10;This commit introduces the basic structure for the Home view." />
-    <MESSAGE value="chore: Remove unused index.ejs" />
     <MESSAGE value="feat(router): Add vue router configuration" />
     <MESSAGE value="chore: Remove unused login.ejs" />
     <MESSAGE value="feat(Login): Add Login view" />
@@ -535,7 +530,21 @@
     <MESSAGE value="feat: server.js - API routes and production setup" />
     <MESSAGE value="feat: Add getMe endpoint to userController" />
     <MESSAGE value="feat: Add user routes&#10;&#10;This commit adds the user routes with a /me endpoint." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add user routes&#10;&#10;This commit adds the user routes with a /me endpoint." />
+    <MESSAGE value="chore: gitignore: Add .idea folder" />
+    <MESSAGE value="chore: Update workspace.xml" />
+    <MESSAGE value="chore: Add .gitignore for client" />
+    <MESSAGE value="feat: Add App.vue layout with Navbar and router-view" />
+    <MESSAGE value="feat: vscode - Add volar extension recommendation" />
+    <MESSAGE value="feat: Add initial client HTML" />
+    <MESSAGE value="feat: Initialize Vue app with Pinia and router" />
+    <MESSAGE value="feat: Add Navbar component" />
+    <MESSAGE value="feat: client: Add client package.json" />
+    <MESSAGE value="chore" />
+    <MESSAGE value="docs: Add README to client" />
+    <MESSAGE value="feat: Add basic styling to client app" />
+    <MESSAGE value="feat: Add Vite configuration file" />
+    <MESSAGE value="feat: Add Vite and Vue logos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Vite and Vue logos" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
