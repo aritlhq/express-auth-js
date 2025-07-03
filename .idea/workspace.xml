@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="docs: Fix indentation in project structure section of README.md">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="feat: Add user routes&#10;&#10;This commit adds the user routes with a /me endpoint.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,29 +31,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.test | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | POST#1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | POST#2.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.test | #1.executor": "Run",
+    "HTTP Request.test | POST#1.executor": "Run",
+    "HTTP Request.test | POST#2.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ChatTagsLlmMigration": "true",
+    "RunOnceActivity.ClientConfigCleanupMigration": "true",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
+    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "vue",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "D:/Repositories/express-auth-js",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "aigit.settings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Repositories\express-auth-js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Repositories\express-auth-js\src\views" />
       <recent name="D:\Repositories\express-auth-js\src" />
@@ -79,7 +99,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
       </set>
     </attachedChunks>
   </component>
@@ -92,6 +113,11 @@
       <updated>1748554004702</updated>
       <workItem from="1748554009270" duration="253000" />
       <workItem from="1750667540621" duration="12636000" />
+      <workItem from="1751564766508" duration="133000" />
+      <workItem from="1751564914094" duration="614000" />
+      <workItem from="1751565561449" duration="40000" />
+      <workItem from="1751565620089" duration="37000" />
+      <workItem from="1751565673419" duration="2390000" />
     </task>
     <task id="LOCAL-00001" summary="chore: add JetBrains IDE workspace configuration file">
       <option name="closed" value="true" />
@@ -309,38 +335,209 @@
       <option name="project" value="LOCAL" />
       <updated>1750767833429</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: api Add api service">
+      <option name="closed" value="true" />
+      <created>1751586326050</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586326050</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat(auth): Add auth store with login, register, logout">
+      <option name="closed" value="true" />
+      <created>1751586331713</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586331713</updated>
+    </task>
+    <task id="LOCAL-00030" summary="refactor(auth): Switch to JSON responses for auth routes">
+      <option name="closed" value="true" />
+      <created>1751586336007</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586336007</updated>
+    </task>
+    <task id="LOCAL-00031" summary="refactor(authMiddleware): Improve authentication handling">
+      <option name="closed" value="true" />
+      <created>1751586339960</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586339960</updated>
+    </task>
+    <task id="LOCAL-00032" summary="chore: Remove unused dashboard view">
+      <option name="closed" value="true" />
+      <created>1751586344281</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586344281</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: Add initial Dashboard view">
+      <option name="closed" value="true" />
+      <created>1751586347910</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586347910</updated>
+    </task>
+    <task id="LOCAL-00034" summary="chore: Remove unused footer partial">
+      <option name="closed" value="true" />
+      <created>1751586351594</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586351594</updated>
+    </task>
+    <task id="LOCAL-00035" summary="chore: Remove unused header partial">
+      <option name="closed" value="true" />
+      <created>1751586354736</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586354736</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat: Add initial Home view&#10;&#10;This commit introduces the basic structure for the Home view.">
+      <option name="closed" value="true" />
+      <created>1751586358401</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586358401</updated>
+    </task>
+    <task id="LOCAL-00037" summary="chore: Remove unused index.ejs">
+      <option name="closed" value="true" />
+      <created>1751586361593</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586361593</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat(router): Add vue router configuration">
+      <option name="closed" value="true" />
+      <created>1751586364927</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586364927</updated>
+    </task>
+    <task id="LOCAL-00039" summary="chore: Remove unused login.ejs">
+      <option name="closed" value="true" />
+      <created>1751586368102</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586368102</updated>
+    </task>
+    <task id="LOCAL-00040" summary="feat(Login): Add Login view">
+      <option name="closed" value="true" />
+      <created>1751586371438</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586371438</updated>
+    </task>
+    <task id="LOCAL-00041" summary="chore: Update package.json with new scripts and dependencies">
+      <option name="closed" value="true" />
+      <created>1751586374697</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586374697</updated>
+    </task>
+    <task id="LOCAL-00042" summary="chore: Update package-lock.json&#10;&#10;Add cors and concurrently dependencies.">
+      <option name="closed" value="true" />
+      <created>1751586378605</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586378605</updated>
+    </task>
+    <task id="LOCAL-00043" summary="chore: Remove unused pageRoutes.js">
+      <option name="closed" value="true" />
+      <created>1751586382350</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586382350</updated>
+    </task>
+    <task id="LOCAL-00044" summary="chore: Remove unused register view">
+      <option name="closed" value="true" />
+      <created>1751586385917</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586385917</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feat(Register): Add Register.vue component">
+      <option name="closed" value="true" />
+      <created>1751586388990</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586388990</updated>
+    </task>
+    <task id="LOCAL-00046" summary="feat: server.js - API routes and production setup">
+      <option name="closed" value="true" />
+      <created>1751586392632</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586392632</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feat: Add getMe endpoint to userController">
+      <option name="closed" value="true" />
+      <created>1751586400418</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586400418</updated>
+    </task>
+    <task id="LOCAL-00048" summary="feat: Add user routes&#10;&#10;This commit adds the user routes with a /me endpoint.">
+      <option name="closed" value="true" />
+      <created>1751586404305</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1751586404305</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: Add HTTP request response snapshot for dashboard access" />
-    <MESSAGE value="feat: add auth controller with register, login, and logout functionality" />
-    <MESSAGE value="feat: add auth middleware with JWT verification and user handling&#10;&#10;Add protect middleware for route authentication and addUserToLocals for template access" />
-    <MESSAGE value="feat: add auth middleware and routes for user authentication&#10;&#10;Add auth middleware with protect and addUserToLocals functions&#10;Add auth routes for register, login, and logout operations" />
-    <MESSAGE value="feat: add dashboard view with user greeting and protected content&#10;&#10;Added new dashboard.ejs template displaying welcome message and user details" />
-    <MESSAGE value="feat: add dashboard view for authenticated users&#10;&#10;The commit adds a new dashboard.ejs view that displays user information and welcome" />
-    <MESSAGE value=" message for logged-in users. The view includes header and footer partials and showsfe protected content.at: add footer partial" />
-    <MESSAGE value="feat: add header and footer partials for views" />
-    <MESSAGE value="feat: add header partial with auth navigation&#10;&#10;Add header.ejs template with conditional navigation links for authenticated users. Includes login/logout functionality and basic page" />
-    <MESSAGE value="chore: add HTTP request log for auth login endpoint" />
-    <MESSAGE value="feat: add HTTP request log and home page template&#10;&#10;chore: include new files for development environment and views" />
-    <MESSAGE value="feat: add index and login EJS templates&#10;&#10;Add initial view templates for home page and login form, including partial includes for header and footer." />
-    <MESSAGE value="feat: add initial User table migration&#10;&#10;Added User table with id, name, email, password, createdAt, and updatedAt fields. Includes unique email constraint and primary key." />
-    <MESSAGE value="chore: add prisma migration lock file for mysql" />
-    <MESSAGE value="chore: add initial package.json with project dependencies" />
-    <MESSAGE value=" page controller with basic route handlers&#10;&#10;Added controller functions for home, login, register, and dashboard pages" />
-    <MESSAGE value="feat: add page routes with auth middleware and protected dashboard route" />
-    <MESSAGE value="feat: add register view template with form and error handling" />
-    <MESSAGE value="feat: add Prisma schema with User model&#10;&#10;Added initial Prisma schema file with database configuration and User model definition." />
-    <MESSAGE value="feat: add initial Prisma schema and Express server setup&#10;&#10;Add User model to Prisma schema and configure basic Express server with auth routes" />
-    <MESSAGE value="test: add HTTP test file for auth login endpoint" />
-    <MESSAGE value="chore: add VCS configuration file for IntelliJ IDEA&#10;&#10;The file configures Git as the version control system for the project." />
     <MESSAGE value="initial commit" />
     <MESSAGE value="docs: Add comprehensive README.md for express-auth-js project" />
     <MESSAGE value="docs: Fix indentation in project structure section of README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: Fix indentation in project structure section of README.md" />
+    <MESSAGE value="feat: api.js: Add API client using axios" />
+    <MESSAGE value="feat: api Add api service" />
+    <MESSAGE value="feat(auth): Add auth store with login, register, logout" />
+    <MESSAGE value="refactor(auth): Switch to JSON responses for auth routes" />
+    <MESSAGE value="refactor(authMiddleware): Improve authentication handling" />
+    <MESSAGE value="chore: Remove unused dashboard view" />
+    <MESSAGE value="feat: Add initial Dashboard view" />
+    <MESSAGE value="chore: Remove unused footer partial" />
+    <MESSAGE value="chore: Remove unused header partial" />
+    <MESSAGE value="feat: Add initial Home view&#10;&#10;This commit introduces the basic structure for the Home view." />
+    <MESSAGE value="chore: Remove unused index.ejs" />
+    <MESSAGE value="feat(router): Add vue router configuration" />
+    <MESSAGE value="chore: Remove unused login.ejs" />
+    <MESSAGE value="feat(Login): Add Login view" />
+    <MESSAGE value="chore: Update package.json with new scripts and dependencies" />
+    <MESSAGE value="chore: Update package-lock.json&#10;&#10;Add cors and concurrently dependencies." />
+    <MESSAGE value="chore: Remove unused pageRoutes.js" />
+    <MESSAGE value="chore: Remove unused register view" />
+    <MESSAGE value="feat(Register): Add Register.vue component" />
+    <MESSAGE value="feat: server.js - API routes and production setup" />
+    <MESSAGE value="feat: Add getMe endpoint to userController" />
+    <MESSAGE value="feat: Add user routes&#10;&#10;This commit adds the user routes with a /me endpoint." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add user routes&#10;&#10;This commit adds the user routes with a /me endpoint." />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>
