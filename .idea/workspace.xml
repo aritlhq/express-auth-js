@@ -5,9 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7dac168-48ac-4942-9663-426fd0140653" name="Changes" comment="fix: correct token validation logic in password reset flow&#10;&#10;Updated authController.js to improve token validation messaging and password update comments for better clarity in password reset functionality.">
-      <change beforePath="$PROJECT_DIR$/.env-example" beforeDir="false" afterPath="$PROJECT_DIR$/.env-example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composables/useAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/guest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/dashboard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/forgot-password.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/reset-password/[token].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/auth/forgot-password.post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/auth/login.post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/auth/logout.post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/auth/me.get.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/auth/register.post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/auth/reset-password.post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/auth/verify-token.get.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/utils/prisma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/utils/sendEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20250623132509_init/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20250624133548_add_password_reset/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20250624134852_cihuyy/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/migration_lock.toml" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/migrations/migration_lock.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/authController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/pageController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/authMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/authRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/pageRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/sendEmail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/forgot-password.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/login.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/footer.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/header.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/register.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reset-password.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.http" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,29 +75,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.test | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | POST#1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | POST#2.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pw-reset-link&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.test | #1.executor": "Run",
+    "HTTP Request.test | POST#1.executor": "Run",
+    "HTTP Request.test | POST#2.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "nuxt-pw-reset-link",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Repositories\express-auth-js\src\views" />
@@ -457,5 +500,8 @@
     <MESSAGE value="chore: add database configuration and migration files&#10;&#10;feat: add password reset functionality to user model" />
     <MESSAGE value="fix: correct token validation logic in password reset flow&#10;&#10;Updated authController.js to improve token validation messaging and password update comments for better clarity in password reset functionality." />
     <option name="LAST_COMMIT_MESSAGE" value="fix: correct token validation logic in password reset flow&#10;&#10;Updated authController.js to improve token validation messaging and password update comments for better clarity in password reset functionality." />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>
