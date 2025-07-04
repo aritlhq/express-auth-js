@@ -1,6 +1,8 @@
 # Express.js Authentication with JWT & Prisma
 
-A robust starter template for building secure web applications with Node.js, Express.js, and Prisma. This project provides a complete, ready-to-use authentication system including user registration, login, logout, and protected routes using JSON Web Tokens (JWT) stored in httpOnly cookies.
+A robust starter template for building secure web applications with Node.js, Express.js, and Prisma. This project
+provides a complete, ready-to-use authentication system including user registration, login, logout, and protected routes
+using JSON Web Tokens (JWT) stored in httpOnly cookies.
 
 ## ✨ Features
 
@@ -14,13 +16,16 @@ A robust starter template for building secure web applications with Node.js, Exp
 - MVC-like Structure: Organized code with controllers, routes, middleware, and views for maintainability.
 
 I also added a few additional branches with different features according to their names:
+
 - [with-roles](https://github.com/aritlhq/express-auth-js/tree/with-roles)
 - [todo-list](https://github.com/aritlhq/express-auth-js/tree/todo-list)
 - [pw-reset-link](https://github.com/aritlhq/express-auth-js/tree/pw-reset-link)
 
 Frontend Framework:
+
 - [vue](https://github.com/aritlhq/express-auth-js/tree/vue)
 - [nuxt](https://github.com/aritlhq/express-auth-js/tree/nuxt) (without express)
+- [nuxt-pw-reset-link](https://github.com/aritlhq/express-auth-js/tree/nuxt-pw-reset-link) (without express)
 
 ## 🛠️ Tech Stack
 
@@ -32,6 +37,7 @@ Frontend Framework:
 - Development: Nodemon
 
 ## 📂 Project Structure
+
 ```shell
 # Branch: master
 
@@ -75,6 +81,7 @@ Prerequisites
 Installation & Setup
 
 Clone the repository:
+
 ```shell
 Generated bash
 git clone https://github.com/aritlhq/express-auth-js.git
@@ -82,6 +89,7 @@ cd express-auth-js
 ```
 
 Install dependencies:
+
 ```shell
 npm install
 ```
@@ -108,13 +116,15 @@ JWT_SECRET="your-super-secret-key-that-is-long-and-random"
 
 Set up the database:
 
-- Run the Prisma migration command to create the User table in your database based on the schema defined in `prisma/schema.prisma`.
+- Run the Prisma migration command to create the User table in your database based on the schema defined in
+  `prisma/schema.prisma`.
 
 ```shell
 npx prisma migrate dev
 ```
 
 Run the application:
+
 - Start the server in development mode with Nodemon.
 
 ```shell
