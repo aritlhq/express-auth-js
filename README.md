@@ -20,6 +20,7 @@ I also added a few additional branches with different features according to thei
 
 Frontend Framework:
 - [vue](https://github.com/aritlhq/express-auth-js/tree/vue)
+- [nuxt](https://github.com/aritlhq/express-auth-js/tree/nuxt)
 
 ## 🛠️ Tech Stack
 
