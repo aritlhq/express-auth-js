@@ -1,9 +1,0 @@
-#POST
-POST http://localhost:3032/auth/login
-Content-Type: application/json
-Accept: application/json
-
-{
-  "email": "test@mail.com",
-  "password": "password123"
-}
